@@ -473,4 +473,16 @@
     return 0;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if( [self tableView:tableView heightForHeaderInSection:section] == 0 )
+    {
+        return nil;
+    }
+    else
+    {
+        return [super tableView:tableView titleForHeaderInSection:section];
+    }
+}
+
 @end
